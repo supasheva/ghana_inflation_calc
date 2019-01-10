@@ -100,9 +100,10 @@
                 let year1 = year1_select.find('option:selected').val();
 
                 let year2 = year2_select.find('option:selected').val();
+                let adjusted_selection = get_adjusted_cedis(val, year1, year2);
 
                 results.append(jQuery('<h1>GH₵' + val +
-                    ' in ' + year1 + ' cedis, is worth:</h1>'));
+                    ' in ' + year1 + ' cedis, is worth:'+adjusted_selection+' in GH₵'+year2+'</h1>'));
                 let inflation_rate = get_inflation_rate(val,year1,year2);
                 let list = jQuery('<ul></ul>');
                 for (adjusted_year in years_and_cpi) {
