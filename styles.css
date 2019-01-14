@@ -1,5 +1,8 @@
 .list-group{
-    display:inline-block;
+    max-height: 300px;
+    margin-bottom: 10px;
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 .wrapper {
@@ -14,3 +17,4 @@ form {
     margin: 0 auto; 
     width:300px;
     }
+
