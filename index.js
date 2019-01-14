@@ -84,12 +84,12 @@ form.on('submit', function() {
     let adjusted_selection = get_adjusted_cedis(val, year1, year2);
 
     results.append(jQuery('<h1>GH₵' + val +
-        ' in ' + year1 + ' cedis, is worth  GH₵'+adjusted_selection+' in'+year2+'</h1>'));
+        ' in ' + year1 + ' cedis, is worth  GH₵'+adjusted_selection+' in '+year2+'</h1>'));
     let inflation_rate = get_inflation_rate(val,year1,year2);
-    let list = jQuery('<ul></ul>');
+    let list = jQuery('<ul class="list-group"></ul>');
     for (adjusted_year in years_and_cpi) {
         let adjusted_amount = get_adjusted_cedis(val, year1, adjusted_year);
-        list.append(jQuery('<li>GH₵' + adjusted_amount
+        list.append(jQuery('<li class="list-group-item">GH₵' + adjusted_amount
             + ' in ' + adjusted_year + '</li>'));
     }
     results.append(list);
