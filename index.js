@@ -56,7 +56,7 @@ let years_and_cpi = {
     '2017':232.2564866,
   '2018':259.886,
   '2019':278.452,
-  '2020':305.983:
+  '2020':305.983
 };
 let form = jQuery('#calculator');
 let results = jQuery('#results');
